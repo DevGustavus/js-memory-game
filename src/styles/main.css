@@ -3,7 +3,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #fc1e8a;
+    background-image: url("../images/background.jpg");
+    user-select: none;
 }
 
 .container {
@@ -15,11 +16,12 @@ body{
     gap: 30px;
     background: linear-gradient(
         325deg,
-        #03001e,
-        #7303c0 30%,
-        #ec38bc 70%,
-        #fdeff9 100%
+        rgba(3, 0, 30, 0.5),
+        rgba(115, 3, 192, 0.5) 30%,
+        rgba(236, 56, 188, 0.5) 70%,
+        rgba(253, 239, 249, 0.5) 100%
     );
+    border-radius: 20px;
     padding: 40px 60px;
 }
 
@@ -53,14 +55,17 @@ h2 {
 }
 
 .game {
-    width: 430px;
-    height: 430px;
+    width: 476px;
+    height: 476px;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     transform-style: preserve-3d;
     perspective: 500px;
-    border: 1px solid black;
+    border-style: dashed;
+    border-radius: 20px;
+    border-color: #fff;
 }
 
 .item {
@@ -78,13 +83,18 @@ h2 {
 }
 
 .item::after {
-    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "?";
+    color: #ff0000;
     position: absolute;
     inset: 0;
     background: #404040;
     transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
+    opacity: 0.85;
 }
 
 .item.boxOpen {
@@ -95,3 +105,52 @@ h2 {
 .boxMatch::after {
     transform: rotateY(180deg);
 }
+
+.container .modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 40px 60px;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: linear-gradient(
+        45deg,
+        #1e392b,
+        #2b503f 20%,
+        #1e392b 40%,
+        #336e55 60%,
+        #1e392b 80%,
+        #2b503f
+    );
+}
+
+.modal.modal-hide {
+    display: none;
+}
+
+.container .modal img {
+    width: 400px;
+}
+
+.container .modal div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .modal div button {
+    width: 100%;
+    padding: 20px;
+    border: none;
+}
+
+.container .modal div button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
