@@ -1,6 +1,7 @@
 let jogo_livreBtn = document.querySelector("#jogo_livre");
 let jogo_tempoBtn = document.querySelector("#jogo_tempo");
 let modal_element = document.querySelector(".modal");
+let titulo_container = document.querySelector("#titulo_container");
 
 let time = 120;
 
@@ -36,6 +37,23 @@ for (let i = 0; i < emojis.length; i++) {
     document.querySelector(".game").appendChild(box);
 }
 */
+
+function gameOver() {
+    if(document.querySelectorAll(".boxMatch").length == emojis.length){
+        titulo_container.textContent = "Você venceu!";
+        titulo_container.style.color = "lightgreen";
+        document.querySelectorAll(".item").forEach((card) => {
+            card.onclick = null;
+        });
+    }
+    else {
+        titulo_container.textContent = "Tempo esgotado!";
+        titulo_container.style.color = "red";
+        document.querySelectorAll(".item").forEach((card) => {
+            card.onclick = null;
+        });
+    }
+}
 
 function playSound(audioName, typeAudio, volume, loopChoice) {
     let audio = new Audio(`./src/audios/${audioName}.${typeAudio}`);
@@ -107,7 +125,7 @@ function checkMatch() {
     openCards = [];
 
     if(document.querySelectorAll(".boxMatch").length == emojis.length){
-        alert("voce venceu");
+        gameOver();
     }
 }
 
@@ -123,7 +141,7 @@ function countTime() {
     }
 
     if(time == 0){
-        alert("fodac");
+        gameOver();
     }
 }
 

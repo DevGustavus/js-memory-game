@@ -5,4 +5,6 @@
     box-sizing: border-box;
     font-family: "Bebas Neue", sans-serif;
     font-family: "Press Start 2P", cursive;
+    text-decoration: none;
+    color: inherit;
 }
