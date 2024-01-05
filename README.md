@@ -1,7 +1,7 @@
 <h1 align="center">JS-Detona-Ralph-Game</h1>
 
 ## 📲 View the project here
-<a href="https://devgustavus.github.io/JS-Detona-Ralph-Game/">https://devgustavus.github.io/JS-Detona-Ralph-Game/</a>
+<a href="https://devgustavus.github.io/js-memory-game/">https://devgustavus.github.io/js-memory-game/</a>
 
 ## 📖 About the project
 Project developed as part of a code/project challenge at DIO, as part of the BootCamp: "Potência Tech iFood - Game Development." The project is based on the logic of the memory game, meaning its algorithm is grounded in sorting and shuffling, along with various other interactivities that provide a good user experience. Not only that, but the game also features two modes: the free and timeless mode, and the timed mode, which includes a 2-minute countdown timer.
