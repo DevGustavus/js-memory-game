@@ -1,4 +1,4 @@
-<h1 align="center">JS-Detona-Ralph-Game</h1>
+<h1 align="center">js-memory-game</h1>
 
 ## 📲 View the project here
 <a href="https://devgustavus.github.io/js-memory-game/">https://devgustavus.github.io/js-memory-game/</a>
